@@ -1,32 +1,34 @@
-# jarkomkris-api
+# backend-jakomkris
+ Backend Aplikasi Peta Gereja Tangguh Bencana JaKomKris
 
-This is a basic Express.js application.
+ Pre-requirement:
+  Currently, we need to manually run each file located in preload-data folder sequentially. Example:
+ ```
+ node preload-data/1-insert-article.js
+ ctrl + c
+ ```
 
-## Getting Started
+ How to:
+ ```
+ npm install
+ npm start
+ ```
 
-To get started, follow the instructions below.
+ File .env configuration:
+ ```
+ PTB_DATABASE_URL = mongodb://DB_ENDPOINT:27017/
+ or
+ PTB_DATABASE_URL = mongodb+srv://USERNAME:PASSWORD@CLUSTER_ENDPOINT/
+ ```
+ ```
+ PTB_DATABASE = peta_gereja_tangguh_bencana
+ PTB_IMAGE_BUCKET = images
 
-### Prerequisites
+ PTB_BASE_URL = http://SERVER_URL:8080
+ PTB_DEFAULT_CHURCH_IMAGE_URL = ANY_IMAGE_URL_OR_PATH
+ ```
 
-Make sure you have the following prerequisites installed:
-
-- Node.js v16  (https://nodejs.org)
-
-### Installation
-
-1. Clone the repository:
-
-```shell
-git clone https://github.com/your-username/express-app.git
-```
-
-2. Install Dependencies:
-
-```shell
-npm install
-```
-
-3. Run:
-
-```shell
-npm start
+ Browse:
+ ```
+ http://SERVER_URL:8080
+ ```

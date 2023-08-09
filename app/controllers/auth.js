@@ -113,7 +113,7 @@ const register = async (req, res) => {
         if (uniqueEmail>0) {
             return res.status(400).json({
                 message: "error",
-                data: "email already exist"
+                data: "Email sudah digunakan!"
             });
         }
         const user = new User(data);
@@ -121,7 +121,7 @@ const register = async (req, res) => {
         // await users.create(data);
         res.status(201).json({
             message: "success",
-            data:"user created"
+            data:"Aku berhasil dibuat!"
         });
     } catch (err) {
         console.log(err);

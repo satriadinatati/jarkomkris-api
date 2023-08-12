@@ -101,7 +101,7 @@ const register = async (req, res) => {
     if (validate.length) {
         return res.status(400).json({
             message: "error",
-            data: validate.message
+            data: validate[0].message
         });
     }
 
